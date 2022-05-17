@@ -1,0 +1,133 @@
+# -------------
+# More on lists
+# -------------
+listExample = []
+print('I am listExample, and I am empty.', listExample)
+
+# Append an item to the end of the list
+# listname.append(x), where x is the item to be appended
+listExample.append(1)
+print('Appended 1 to listExample.', listExample)
+
+# Extends a list with all items from the provided iterable
+# listname.extend(iterable)
+iterableExample = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+listExample.extend(iterableExample)
+print('Extended listExample with more numbers.', listExample)
+
+# Insert an item into a specific position in the list
+# listName.insert(i, x), where i is the index to insert at and
+# x is the item to be inserted
+listExample.insert(0, 0) 
+listExample.insert(len(listExample), 11)
+print('Inserted 0 and 11.', listExample)
+
+# Remove the first item with a specific value
+# A ValueError is raised if no value in the list matches x
+# listName.remove(x), where x is the target value
+listExample.remove(11)
+listExample.remove(0)
+print('Removed 0 and 11.', listExample)
+
+# Remove an item at a specific position, and return it. 
+# If no position is given, it removes the last item  in the list
+# listName.pop([i])
+print(listExample.pop())
+print('Popped the last item.', listExample)
+print(listExample.pop(2))
+print('Popped item at index 2.', listExample)
+
+# Clear all items in the list
+# listName.clear()
+clearMe = ['a', 'b', 'c', 'd']
+print('I am clearMe', clearMe)
+clearMe.clear()
+print('Now I am cleared, empty.', clearMe)
+
+# Find an item in the list with a specific value, return its index.
+# Can specify start and stop indices, include start and exclude stop.
+# A ValueError is raised if no value exists in the list.
+# listName.index(x[, start[, end]])
+print('In listExample, the value of 2 is located at index', 
+    listExample.index(2))
+print(listExample)
+
+# Return the number of times a value appears in the list
+# listName.count(x), where x is the value to count
+ones = [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1]
+print('I am ones, the list.', ones)
+print('There are', ones.count(1), 'ones in the list')
+
+# Sort the list items in place
+# listName.sort(*, key = None, reverse = False)
+# key is a function that determines how to sort the list
+# reverse is a boolean that determines if the sort op is reversed
+toBeSortedList = ['b', 'y', 'z', 'a']
+print('I am an unsorted list.', toBeSortedList)
+toBeSortedList.sort()
+print('Now I am sorted, using the default key and no reversal.', toBeSortedList)
+
+# Reverse the items in place
+# listName.reverse()
+toBeSortedList.reverse()
+print('I am now reversed.', toBeSortedList)
+
+# Return a shallow copy of the list
+# listName.copy()
+listOrig = [5, 10, 14, 21, 7, 54]
+print("I am listOrig.", listOrig)
+listCopy = listOrig.copy()
+print("I am listCopy, a copy of listOrig.", listCopy)
+
+
+# Using a list as a stack is simple. Pop the topmost item with 
+# listName.pop() and push items with listName.append(x)
+stack1 = [10, 15, 20, 25, 30]
+print("I am a stack.", stack1)
+stack1.append(35)
+print("Pushed 35 to the stack.", stack1)
+stack1.append(40)
+print("Pushed 40 to the stack.", stack1)
+stack1.pop()
+print("Popped 40 from the stack.", stack1)
+stack1.pop()
+print("Popped 35 from the stack.", stack1)
+
+# It is possible to use a list as a queue, but it is inefficient.
+# Tutorial recommends using collections.deque instead.
+# But... If I treat the queue start as index 0, then dequeue-ing
+# is possible by reversing the list, then popping, then reversing again
+def dequeue(list):
+    list.reverse()
+    list.pop()
+    list.reverse()
+
+queue1 = ['Tim', 'Tom', 'Jim', 'Jom']
+print('I am a queue, with', queue1[0], 'first.', queue1)
+dequeue(queue1)
+print('Now serving next customer. Line is now:', queue1)
+queue1.append('Slim')
+print('New customer in line. Line is now:', queue1)
+dequeue(queue1)
+print('Now serving next customer. Line is now:', queue1)
+dequeue(queue1)
+print('Now serving next customer. Line is now:', queue1)
+dequeue(queue1)
+print('Now serving next customer. Line is now:', queue1)
+
+# List comprehensions can be used to create lists concisely.
+# Brackets contain an expression followed by a for clause, and,
+# optionally, one or more for/if clauses
+cubeMe = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print('I am a list to be cubed, and show odd cubes only.', cubeMe)
+newCubeMe = [x**3 for x in cubeMe if x % 2 != 0]
+print('I am now a new list containing odd cubes', 
+newCubeMe)
+
+# If using tuples (x, y, ...), then use parentheses to denote them
+newCubeMe = [(x, x**3) for x in cubeMe if x % 2 != 0]
+print('I am now a new list containing 2-tuples of odd cubes', 
+newCubeMe)
+
+# List comps can be nested inside of list comps
+matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
