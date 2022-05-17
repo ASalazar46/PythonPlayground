@@ -1,0 +1,43 @@
+# -------------
+# Modules
+# -------------
+# Definitions are lost upon quitting from the Python interpreter.
+# Prevent this from happening by writing them inside files called
+# modules (.py files). 
+
+# Import the module by using the import clause
+import module1
+
+# Import specific statements from modules by using the from clause
+from module1 import squareMe
+
+# If you want to import everything from a module, use:
+# from module1 import *
+
+# Can give a module name an alias by using the as clause
+import module2 as m2
+
+# Can also give an alias from specific imported items
+from module2 import destroyBucket as dont
+
+# To use a function from an imported module, treat the function
+# as a method of the file object ( i.e: filename.method() )
+print(module1.squareMe(2))
+
+# If typing the file name is too tedious, have a shorter-named
+# variable point to the function
+s = module1.squareMe
+print(s(2))
+
+# Python comes with other modules that one can import 
+# Refer to the Python Library Reference
+
+# List all of a module's definitions by using dir(module)
+dir(module1)
+dir(m2)
+
+# Packages are a collection of modules
+# It follows a dotted module name convention. 
+# import A.B
+# from A import B
+# A is the package name and B is the module name
