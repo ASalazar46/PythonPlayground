@@ -130,4 +130,192 @@ print('I am now a new list containing 2-tuples of odd cubes',
 newCubeMe)
 
 # List comps can be nested inside of list comps
-matrix = [[1, 2, 3, 4], [5, 6, 7, 8], [9, 10, 11, 12]]
+nestedList = [[i*j for j in range(1, len(cubeMe))] for i in cubeMe]
+print(nestedList)
+# Produces a 10x10 multiplication list for factors 1 to 9
+# Nested list comps work similar to nested for loops in a for loop
+
+# -------------
+# del statement
+# -------------
+# Use this statement to remove an item from a given index or slice
+# of indices, rather than a given value. Can also delete entire
+# variables
+list = [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10]
+print('I am a list.', list)
+del list[0]
+print('Deleted value at index 0, -10.', list)
+del list[6:]
+print('Deleted values starting at index 6 and up until list\'s end', list)
+del list[:]
+print('Deleted whatever was left in the list', list)
+
+# --------------------
+# Tuples and sequences
+# --------------------
+# An n-tuple consists of n values separated by commas
+# e.g: (1, 'a', 2, 'b) is a 4-tuple
+tuple = 1, 'a', 2, 'b'
+print('I am a 4-tuple.', tuple)
+
+# Tuples can be nested in tuples
+tuple2 = tuple, 3, 'c'
+print('I am a 4-tuple with a 4-tuple inside.', tuple2)
+tuple3 = tuple, (3, 'c')
+print('I am a 2-tuple containing a 4-tuple and 2-tuple.', tuple3)
+
+# Tuples are immutable, so don't try to change them after declaration
+# but can contain mutable objects
+mutableObjs = (['a', 'b', 'c'], [1, 2, 3])
+print('Tuples are immutable, but can contain mutable objects.',
+ mutableObjs)
+
+# Tuples containing none or one item are handled slightly differently
+zeroTuple = ()
+print("I am a tuple with no items.", zeroTuple)
+print("Length of a 0-tuple:", len(zeroTuple))
+oneTuple = 'Hey', 
+print("I am a tuple with one item.", oneTuple)
+print("Length of a 1-tuple:", len(oneTuple))
+
+# Tuples can be packed and unpacked
+packedTuple = 'a', 'b', 'c'
+print('I am a packed tuple.', packedTuple)
+x, y, z,  = packedTuple
+print('I am an unpacked tuple', x, y, z)
+
+# -----
+# Sets
+# -----
+# A set is an unordered collection with no duplicate elements. 
+# Specify sets using brackets {} or with the set() function
+set1 = {'pizza', 'pizza', 'hotdog', 'burger', 'burger', 'burger'}
+print("I am a set that contains no duplicates.", set1)
+def setHasItem(target, set):
+    if target in set:
+        print(target, 'is in the set.')
+    else:
+        print(target, 'is NOT in the set.')
+setHasItem('pizza', set1)
+setHasItem('orange', set1)
+
+# Sets can handle set operations like union, intersection, 
+# difference, and symmetric difference
+set2 = {'burger', 'fries', 'taco', 'burrito', 'burger'}
+
+print('Unique items in set 1:', set1)
+print('Unique items in set 2:', set2)
+print('Items in set 1 AND set 2:', set1 & set2)
+print('Items in set 1 OR set 2:', set1 | set2)
+print('Items in set 1 but NOT in set 2', set1 - set2)
+print('Items in set 2 but NOT in set 1', set2 - set1)
+print('Items in set 1 and set 2, but NOT both:', set1 ^ set2)
+
+# Sets can have set comprehensions
+newSet = {i for i in 'the quick brown fox jumped over the lazy dog'}
+print(newSet)
+
+# ------------
+# Dictionaries
+# ------------
+# Dictionaries are similar to lists, but are indexed with keys.
+# Keys can be numbers, strings, or other immutable objects. Tuples
+# can be keys if they only contain immutables
+# Best thought of as key-value pairs, where each key is unique
+dict1 = {}
+print("I am an empty phonebook.", dict1)
+dict1['Tim'] = '111-111-1111'
+print("Tim has been added as a contact.", dict1)
+dict1['SPAM RISK'] = '295-735-1950'
+print("SPAM RISK has been added as a contact.", dict1)
+dict1['Tom'] = '222-222-2222'
+print("Tom has been added a contact.", dict1)
+print("Listing current contacts:\n")
+print(dict1, end='\n')
+del dict1['SPAM RISK']
+print("SPAM RISK removed from contacts.", dict1)
+
+# Can use a dictionary constructor to create dictionaries
+print('Showing dictionary from dict() constructor: \n', 
+dict([('Tim', 1), ('Tom', 2), ('Jim', 3), ('Jom', 4)]))
+
+# Can also use dictionary comprehensions
+dictComp = {x: 10*x for x in range(10)}
+print('Dictionary from comprehension:', dictComp)
+
+# Can also use use keywords-value pairs
+print('Keyword-value pair dictionary: \n',
+dict(asdf = 12345, fdsa = 54321))
+
+# ------------------
+# Looping techniques
+# ------------------
+# WHen looping a dictionary, can retrieve key and value with the
+# items() method
+reviews = {'pizza': 'is good', 'cabbage': 'is not good'}
+for a, b in reviews.items():
+    print(a, b)
+
+# When looping through a sequence, an index and value can be
+#  acquired with enumerate()
+word = 'qwertyuiopasdfghjklzxcvbnm'
+for a, b in enumerate(word):
+    print(a, b, end=' | ')
+print('\n')
+
+# Loop over two or more sequences using the zip() function
+letters = ['a','b', 'c', 'd']
+numbers = [1, 2, 3, 4]
+for l, n in zip(letters, numbers):
+    print("{0} is letter #{1} of the alphabet.".format(l, n))
+
+# Loop over a forward sequence in reverse by using reversed()
+for x in reversed(range(0, 10, 1)):
+    print(x, end=' ')
+print('\n')
+
+# Loop over a sequence in sorted order with sorted()
+colors = ['blue', 'orange', 'green', 'green', 'yellow']
+for c in sorted(colors):
+    print(c, end=' --> ')
+print('\n')
+
+# When looping over a list, it is better to make create a new list
+# with desired changes rather than editing the existing one
+data = [1, 2, 3, 4, 5, 6, 7, 8]
+print("Raw number list:", data)
+oddOnly = []
+evenOnly = []
+for item in data:
+    if item % 2 == 0:
+        evenOnly.append(item)
+    else:
+        oddOnly.append(item)
+print('Filtered number lists:\n', oddOnly, '\n', evenOnly)
+
+# -------------------
+# More on Conditions
+# -------------------
+# Conditions can have operators in addition to comparisons
+if (a > b) == c:
+    pass
+
+# The is and is not comparison operators check is two objects
+# are truly the same or not, respectively
+if a is b:
+    pass
+if a is not b:
+    pass
+
+# Boolean comparison operators can be used, and negated with a not
+# clause
+if a and b or c:
+    pass
+if not a or not b and not c:
+    pass
+# It is useful to use parentheses to specify the desired conditions
+
+# Boolean operators and & or are short-circuit, meaning that if
+# one part of the condition is true, going from left to right,
+# then the rest of the condition is ignored
+
