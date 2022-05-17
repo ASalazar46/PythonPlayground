@@ -1,0 +1,56 @@
+# ----------------
+# Fancier output formatting
+# ----------------
+# Using formatted string literals can help make outputs look better
+# Put f or F before a quote mark. Can use {} inside these types
+# of strings which serve as placeholders for variable values
+adjective = 'great'
+noun = 'Pizza'
+verb = 'tastes'
+print(f'{noun} {verb} {adjective}!')
+
+# Placing a number after ':' denotes the minimum amount of characters
+# wide the placeholder {} has to be (e.g: {:10} is 10 chars wide minimum).
+# !a converts the value to ascii, !s to string, and !r to representation.
+# Reference the full list in section "Format Specification Mini-Language"
+
+# Can also use str.format() to do the same thing, but requires
+# a bit more setup
+print('{0} {1} {2}!'.format(noun, verb, adjective))
+
+# Placing numbers in placeholders represent the position each object
+# in format() should go to (i.e: object in position 0 goes into the 
+# placeholder labeled 0).
+# Can also use keywords to denote placeholders, as seen above.
+
+# Can combine both, but specify the positional objects first then 
+# the keyword objects
+print('{0} {1} {adj}!'.format(noun, verb, adj = adjective))
+
+# And then there is manually styling the sentence yourself, which
+# requires the most setup (and the most tedious)
+print('Pizza tastes great!')
+
+# Can modify the justification of a string with
+# str.rjust(), str.ljust(), and str.center().
+# str.zfill() pads a numeric string with zeros on the left
+
+# Convert any value into a string by using str()
+number = 12345
+print(str(number))
+
+# repr() does the same job, but is a bit different when given strings
+print(repr(number))
+
+string = 'I am a string! \'Single quotes\' \n'
+print(str(string))
+print(repr(string))
+
+# str() is more for human-readability, while repr() is more for
+# the interpreter-readability
+
+# -------------------------
+# Reading and writing files
+# -------------------------
+# Before reading and writing files, one must open it first, or create
+# one if no file exists
