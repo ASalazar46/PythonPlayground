@@ -52,5 +52,33 @@ print(repr(string))
 # -------------------------
 # Reading and writing files
 # -------------------------
-# Before reading and writing files, one must open it first, or create
-# one if no file exists
+# Before reading and writing files, one must open it first.
+# f = open(filename, mode, encoding)
+
+# The mode handles the operation conducted on the file. 
+# Operations include reading, writing, appending, or both read & write.
+# The third parameter is the encoding. For most cases, this should
+# be left as utf-8 unless you absolutely need to use a different encoding.
+
+# To close a file, use the file method close()
+# f.close()
+
+# Use read() to read a specific length of data from the file
+# and return it as a string. If size is left blank or negative, it reads 
+# and returns the entire file's contents 
+# f.read(size)
+
+# Read a single line from the file with:
+# f.readline()
+
+# Write contents to the file with, returns the character count in string
+# f.write(string)
+# Write actions only take strings, so convert different types into
+# strings first before attempting a write
+
+# Use tell() to check the position of the file object in the file.
+# Change its position by using seek()
+# f.tell() & f.seek(offset, refpoint)
+
+# For structured data like nested lists and dictionaries, use the
+# JSON library to handle such objects in file reads/writes
