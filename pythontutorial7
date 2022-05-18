@@ -1,0 +1,95 @@
+# -------
+# Classes
+# -------
+# They look like this:
+"""
+    class ClassName:
+        a = 'Hey; # data attribute
+
+        def classFunction():  # method
+            return "HEYO"
+"""
+# a and classFunction() are class attributes, referenced by
+# ClassName.a and ClassName.classFunction()
+
+# Instantiate this class by using:
+'''
+    newClass = ClassName()
+''' 
+
+# Initialize an instantiated class with:
+'''
+    def __init__(self, arg1, arg2, ...):
+        pass # Insert initializations and arg values here
+'''
+
+# Class variables are refered to as data attributes,
+# while class functions are refered to as methods.
+# Data attributes need not be declared, but methods need to.
+
+# Instance variables are variables unique to that instance of the class.
+# Instance variables are unique, class variables are shared for all
+# instances of a class. 
+class FourSided:
+    sideCount = 4
+    alsoKnownAs = 'Quadrilaterals'
+    def __init__(self, name):
+        self.name = name
+
+a = FourSided('Square')
+b = FourSided('Trapezoid')
+c = FourSided('Rectangle')
+print(a.name) # Instance variable name
+print(b.name)
+print(c.name)
+
+print(a.sideCount) # Class variable sideCount
+print(b.sideCount)
+print(c.sideCount)
+
+print(a.alsoKnownAs) # Class varialbe alsoKnownAs
+print(b.alsoKnownAs)
+print(c.alsoKnownAs)
+
+# Better to not have mutable objects as class variables, but
+# as instance variables instead
+
+# If there is a instance variable and class variable of the same name,
+# then lookups of the attribute prioritize the instance variable
+class Greetings:
+    greeting = 'Hey'
+g1 = Greetings()
+print(g1.greeting) # Prints Hey
+g2 = Greetings()
+g2.greeting = 'HEYO'
+print(g2.greeting)  # Prints HEYO instead of Hey
+
+# Methods may call  other methods with the self argument
+class BrokenCounter:
+    def __init__(self):
+        self.count = 0
+    
+    def increment(self):
+        self.count += 1
+
+    def decrement(self):
+        self.count -= 1
+
+    def count(self):
+        self.increment()
+        self.decrement()
+    
+# Class inheritance is possible by providing the parent class
+# as an argument of the child class, and a child can derive from
+# multiple parent classes
+"""
+    class ChildClass(ParentClass1, ParentClass2):
+        pass # Code here
+"""
+
+# There are no private variables in Python officially, but,
+# unofficially, one could treat variables prefixed with underscores
+# as private variables.
+'''
+    _pizza = pizza # This is "private" variable
+'''
