@@ -1,0 +1,45 @@
+# -------------
+# Errors and exceptions
+# -------------
+# Syntax errors occur when there is a mistake in the written code
+"""
+    if x > 0 print(hello world) raises syntax errors
+"""
+# Exceptions occur when the code is syntactically correct, but there
+# is a mistake when it gets executed
+"""
+    dividing by zero --> 999 / 0
+"""
+# Use try and except code blocks to handle exceptions
+"""
+    def divider(n, m):
+        quotient = 0
+        try:
+            quotient = n / m
+        except ZeroDivisionError:
+            return 'Cannot divide by zero'
+        else:
+            return quotient
+"""
+# The try block executes first. If no errors occur, the try block
+# ends and the except block is skipped. If there is an error, and it
+# matches the error in the except block, the try block code is skipped and
+# the except block code is executed. If there is an error, and the except
+# block does not match the error, the unhandled error is thrown until
+# it gets handled or it becomes an unhandled exception.
+
+# Can have multiple except blocks to handle more than one exception
+
+# else clauses can be written after except blocks, which executes
+# after a try block completes with no errors
+
+# Forcibly raise an exception by using the raise clause
+"""
+    raise ValueError()
+"""
+
+# A finally block always executes in the event of success or error
+"""
+    finally:
+        pass # put some clean-up code here
+""" 
