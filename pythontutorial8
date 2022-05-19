@@ -1,0 +1,105 @@
+# -----------------------------------
+# Brief tour of the Standard Library
+# -----------------------------------
+# The 'os' module provides a way to interact with the operating
+# system
+'''
+    import os
+'''
+
+# The 'glob' module lists all paths that match a given pathname, but
+# the method glob() can be used to list files from a wildcard search
+# (i.e: a search as denoted by *.<fileExt>)
+'''
+    import glob
+    glob.glob('*.txt')
+    # will list all .txt files 
+'''
+
+# Command line arguments can be processed by accessing the 'sys' 
+# module's 'argv' data attribute
+'''
+    import sys
+    args = sys.argv
+    ... # do things with the args
+'''
+# Processing command line arguments is also possible by 
+# argparse.ArgumentParser(), and argparse.parse_args()
+''' # directly from the tutorial
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        prog='top',
+        description='Show top lines from each file')
+    parser.add_argument('filenames', nargs='+')
+    parser.add_argument('-l', '--lines', type=int, default=10)
+    args = parser.parse_args()
+    print(args)
+'''
+
+# 'sys' also has data attributes that could access standard input, 
+# output, and error (stdin, stdout, stderr). 
+'''
+    sys.stdin
+    sys.stdout
+    sys.stderr
+'''
+# Terminate a script with sys.exit()
+
+# Module 're' provides regular expression matching operations.
+'''
+    import re
+'''
+# Better suited for complex string processing, while str methods
+# are suited for simpler string processing
+
+# 'math' module provides various mathematial attributes and methods
+'''
+    import math
+'''
+# 'random' provides functions for getting random values
+'''
+    import random
+'''
+# 'statistics' provides mathematical functions related to statistics
+'''
+    import statistics
+'''
+# 'Scipy' contains other attributes and methods for 
+# mathematical computations
+
+# Giving python projects internet access is possible with
+# the 'urllib.requirest' module and 'smtplib' module, but 
+# there are many more modules that assist in internet access
+# and protocols
+'''
+    import urllib.request as urls
+    import smtplib
+'''
+
+# Retrieving and modifying dates and the time can be done with
+# the 'datetime' module
+'''
+    import datetime
+'''
+
+# Compress and/or archive data using methods from many modules.
+# zlib, gzip, bz2, lzma, zipfile, and tarfile all work.
+'''
+    import zlib # or gzip, bz2, lzma, zipfile, tarfile
+'''
+
+# Measure performance with a timer and the 'timeit' module
+'''
+    import timeit
+'''
+
+# In terms of quality control, there are many modules.
+# 'doctest' scans a docstring for embedded tests and validates them 
+'''
+    import 'doctest'
+'''
+# Use 'unittest' for more complex testing
+'''
+    import 'unittest'
+'''
