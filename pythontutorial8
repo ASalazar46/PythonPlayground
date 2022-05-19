@@ -1,5 +1,5 @@
 # -----------------------------------
-# Brief tour of the Standard Library
+# Brief tour of the Standard Library p1 + p2
 # -----------------------------------
 # The 'os' module provides a way to interact with the operating
 # system
@@ -102,4 +102,75 @@
 # Use 'unittest' for more complex testing
 '''
     import 'unittest'
+'''
+
+
+# Output formatting is possible with certain modules.
+# Use 'reprlib' to access a modified version of repr(), which
+# abbreviates long or deep containers
+'''
+    import reprlib
+'''
+# Use pprint to make messu outputs, like nested containers, prettier
+# to look at
+'''
+    import pprint
+'''
+# Use 'textwrap' to fit text to a specified width
+'''
+    import textwrap
+'''
+# Use 'locale' to access databases of culture specific data formats
+'''
+    import locale
+'''
+
+# String templates can be defined and used with the 'Template' class
+# provided by the base 'string' module
+'''
+    from string import Template
+'''
+
+# Working with binry record formats is possible with the 'struct' module
+# This 'struct' is not the same as a struct in a data container sense (
+# as seen in C's version of structs)
+'''
+    import struct
+'''
+
+# Handle sequentially-independent tasks with threads. Use the 'threading'
+# module to do so
+'''
+    import threading
+'''
+
+# Rather than a wave of print() statements littered everywhere in your 
+# code, use 'logging' methods to implement logging messages.
+'''
+    import logging
+'''
+
+# Use the 'weakref' module to track objects without making a permanent
+# reference to the object. Saves precious memory space from unnecessary
+# or short-lived references
+'''
+    import weakref
+''' 
+
+# There are modules that work with lists
+# 'Array' provides an object that works very similar to an array,
+# while 'deque' provides queue functionality to lists. 'bisect'
+# can further manipulate lists. 'heapq' implements heaps to Python
+'''
+    from array import array
+    from collections import deque
+    import bisect
+    import heapq
+'''
+
+# Math operations using floats can be complicated than other numeric
+# types. Use 'deicmal' to assist in floating point math. Useful for
+# applications that require precise calculations
+'''
+    import decimal
 '''
