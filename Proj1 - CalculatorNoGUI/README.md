@@ -19,7 +19,6 @@ Goals:
     calculator.
 Achieved Milestones:
     - [5/20/2022] Project folder and design document (this README.md) created.
-    - [5/21/2022]
 Proposed Solution:
     This calculator should be able to handle EMDAS operations, at minimum, to
     be considered complete. EMDAS stands for: exponentials, multiplication, 
