@@ -6,7 +6,6 @@ print('''\
 ''')
 print('''\
     List of commands:
-    -q --> quit
     + --> addition
     - --> subtraction
     * --> multiplication
@@ -16,19 +15,30 @@ print('''\
 print('''\
 For this calculator to work properly, please type in this format:
 <command> <value1> <value2>
+
+To quit, just type -q
 ''')
 
-run_flag = 1
+# Keep processing input until quitting time
+run_flag = True
 while run_flag:
-    # Wait for user input
+    # Get input
     ui = input("--> ")
-    
-    # Extract arguments into a list
+    # Place inputs into a list
     uiArgs = ui.split(' ')
-    command, v1, v2 = uiArgs
     
-    if command != '-q':
-        # Convert values from strings into their respective types
+    # Check for syntax errors and undefined commands
+    # If no errors, proceed with calculations.
+    if len(uiArgs) < 3:
+        if len(uiArgs) == 1 and uiArgs[0] == '-q':
+            run_flag = False
+        else:    
+            print('Not enough arguments. Try again.')
+    elif len(uiArgs) > 3:
+        print('Too many arguments. Try again.')
+    elif len(uiArgs) == 3:
+        command, v1, v2 = uiArgs
+
         if '.' in v1:
             v1 = float(v1)
         else:
@@ -38,7 +48,6 @@ while run_flag:
         else:
             v2 = int(v2)
             
-        # Parse command
         result = 0
         match command:
             case '+':
@@ -53,8 +62,6 @@ while run_flag:
                 result = v1 ** v2
             case _:
                 result = "Unknown command. Try again."
-        # Print result
+
         print(result)
-    elif command == '-q':
-        run_flag = 0
-        print('Exiting Calculator...')
+print('Exiting Calculator.')
