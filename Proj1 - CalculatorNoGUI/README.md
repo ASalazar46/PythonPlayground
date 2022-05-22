@@ -29,15 +29,16 @@ Proposed Solution:
         - The syntax required to properly pass arguments to the script
         which is: <operator> <value1> <value2>
     The script should then wait for user input that follows the syntax. Perhaps 
-    store user arguments in a list. If it does not follow the syntax, display 
-    an error and continue waiting for input. If the operator is invalid or 
-    undefined, display an error and continue waiting for input. 
-    Internally, functions will handle singular mathematical operation and 
-    prevent unhandled errors. If the values passed to the functions are invalid 
-    for the operator (e.g: giving strings instead of ints to an addition 
-    operator), display an error and wait for more user input. Specifically, for 
-    division-type ops, display an error if value2 is zero (no dividing by zero). 
-    Print the result upon success, and continue to wait for more user input. 
-    Quitting the script should be its own command, possibly something like '-Quit.'
+    store user arguments in a list. The list should be of length 3 to execute 
+    commands or of length 1 if quitting the script, else display an error for 
+    not following syntax. If the operator is invalid or undefined, display an 
+    error and continue waiting for input. Internally, functions will handle 
+    singular mathematical operation and prevent unhandled errors. If the values 
+    passed to the functions are invalid for the operator (e.g: giving strings 
+    instead of ints to an addition operator), display an error and wait for more 
+    user input. Specifically, for division-type ops, display an error if value2 
+    is zero (no dividing by zero). Print the result upon success, and continue to 
+    wait for more user input. Quitting the script should be its own command, 
+    possibly something like '-Quit.'
 Current Progress/Solution:
     adsf
