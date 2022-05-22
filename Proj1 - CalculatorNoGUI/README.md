@@ -1,15 +1,15 @@
-Project Number: 1
-Title: Calculator No GUI
-Team: Andrew Salazar (just me)
-Overview: 
+# Project Number: 1
+# Title: Calculator No GUI
+# Team: Andrew Salazar (just me)
+# Overview: 
     A command line application that functions as a calculator. Will
     save implementing a GUI for a different project.
-Context:
+# Context:
     After reading through the Python tutorial provided by the official 
-    docs page (http://docs.python.org/3.10/tutorial) I searched for
+    [docs page](http://docs.python.org/3.10/tutorial). I searched for
     beginner Python projects. This idea was one of the first that I saw, 
     and I chose to do this project first. 
-Goals:
+# Goals:
     From this project, I will:
     - Learn the basics of organizing Python code into applications (no 
     matter how small or useless they are to anyone). 
@@ -17,10 +17,12 @@ Goals:
     - Become familiar with writing design documents (even if small at first).
     - Create an application that functions as a standard, not scientific, 
     calculator.
-Achieved Milestones:
+# Achieved Milestones:
     - [5/20/2022] Project folder and design document (this README.md) created.
-    - [5/22/2022] Implemented working code with syntax error checks. 
-Proposed Solution:
+    - [5/22/2022] Implemented working code with syntax, value, and operation 
+    error checks.
+
+# Proposed Solution:
     This calculator should be able to handle EMDAS operations, at minimum, to
     be considered complete. EMDAS stands for: exponentials, multiplication, 
     division, addition, and subtraction.
@@ -41,5 +43,5 @@ Proposed Solution:
     is zero (no dividing by zero). Print the result upon success, and continue to 
     wait for more user input. Quitting the script should be its own command, 
     possibly something like '-Quit.'
-Current Progress/Solution:
+# Current Progress/Solution:
     adsf
