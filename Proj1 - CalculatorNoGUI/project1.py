@@ -1,4 +1,6 @@
 # Print greeting message, list available commands, show syntax
+from multiprocessing.sharedctypes import Value
+
 print('''\
 ------------------------------------------
     Hey, I am a calculator.
@@ -27,41 +29,66 @@ while run_flag:
     # Place inputs into a list
     uiArgs = ui.split(' ')
     
+    # Remove excess whitespaces and empty chars, '', from args list
+    noWSArgs = []
+    for arg in uiArgs:
+        if arg != ' ' and arg != '':
+            noWSArgs.append(arg)
+    
     # Check for syntax errors and undefined commands
     # If no errors, proceed with calculations.
-    if len(uiArgs) < 3:
-        if len(uiArgs) == 1 and uiArgs[0] == '-q':
+    if len(noWSArgs) < 3:
+        if len(noWSArgs) == 1 and noWSArgs[0] == '-q':
             run_flag = False
         else:    
             print('Not enough arguments. Try again.')
-    elif len(uiArgs) > 3:
+    elif len(noWSArgs) > 3:
         print('Too many arguments. Try again.')
-    elif len(uiArgs) == 3:
-        command, v1, v2 = uiArgs
+    elif len(noWSArgs) == 3:
+        command, v1, v2 = noWSArgs
+        print(command, v1, v2)
 
         if '.' in v1:
-            v1 = float(v1)
+            try:
+                v1 = float(v1)
+            except ValueError:
+                v1 = 'NaNN'
         else:
-            v1 = int(v1)
+            try:
+                v1 = int(v1)
+            except ValueError:
+                v1 = 'NaNN'
         if '.' in v2:
-            v2 = float(v2)
+            try:
+                v2 = float(v2)
+            except ValueError:
+                v2 = 'NaNN'
         else:
-            v2 = int(v2)
-            
-        result = 0
-        match command:
-            case '+':
-                result = v1 + v2
-            case '-':
-                result = v1 - v2
-            case '*':
-                result = v1 * v2
-            case '/':
-                result = v1 / v2
-            case '**':
-                result = v1 ** v2
-            case _:
-                result = "Unknown command. Try again."
+            try:
+                v2 = int(v2)
+            except ValueError:
+                v2 = 'NaNN'
 
-        print(result)
+        if v1 == 'NaNN' or v2 == 'NaNN':
+            print('Numeric values only. Try again.')
+        else: 
+            result = 0
+            match command:
+                case '+':
+                    result = v1 + v2
+                case '-':
+                    result = v1 - v2
+                case '*':
+                    result = v1 * v2
+                case '/':
+                    if v2 == 0:
+                        print('No dividing by 0. Try again.')
+                    else:
+                        result = v1 / v2
+                case '**':
+                    result = v1 ** v2
+                case _:
+                    result = "Unknown command. Try again."
+
+            print(result)
 print('Exiting Calculator.')
