@@ -1,9 +1,9 @@
 Here be project ideas that I could potentially work on
 (Ideas gathered from Google searches on 'python beginner projects')
 
-Ideas 1 - 15 from:
-    https://www.indeed.com/career-advice/career-development/beginner-projects-for-python
-1. Calculator (with GUI?)
+Ideas 1 - 15 from [here:](https://www.indeed.com/career-advice/career-development/beginner-projects-for-python)
+
+1. Calculator No GUI ([DONE](./Proj1%20-%20CalculatorNoGUI/))
 2. Countdown clock (with GUI?)
 3. Alarm clock (with GUI?)
 4. Rock, Paper, Scissors (with GUI?)
@@ -19,8 +19,8 @@ Ideas 1 - 15 from:
 14. Address book (or expand with contacts list?)
 15. Notes application
 
-Ideas 16 - 17 from:
-    https://www.geeksforgeeks.org/7-python-project-ideas-for-beginners/
+Ideas 16 - 17 [from:](https://www.geeksforgeeks.org/7-python-project-ideas-for-beginners/)
+
 16. Hangman
 17. Number guesser
 
