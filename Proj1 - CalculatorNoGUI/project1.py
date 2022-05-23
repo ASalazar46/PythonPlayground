@@ -82,7 +82,7 @@ while run_flag:
                     result = v1 * v2
                 case '/':
                     if v2 == 0:
-                        print('No dividing by 0. Try again.')
+                        result = 'No dividing by 0. Try again.'
                     else:
                         result = v1 / v2
                 case '**':
