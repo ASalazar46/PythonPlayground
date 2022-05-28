@@ -32,7 +32,7 @@ The standard Python library contains a subset of modules that specialize in cryp
 ### Current Progress/Solution:
 > Two common rules include the use of alphanumeric symbols (including punctuation marks), and password length requirements. More rules possibly exist, but these two rules are the most common, and will serve as the base of a complete application.
 
-The base specs have been implemented, but it took way less time than expected I initially expected. While the base spec of project completion has been achieved, I will definitely add more to this project.
+The base specs have been implemented, but it took way less time than I initially expected. While the base spec of project completion has been achieved, ~~I will definitely add more to this project.~~ I will PROBABLY come back to this project later on, if I learn anything new or come up with more ideas for password generation.
 
 > In order for this application to work, the script must be able to acquire and parse arguments. The script could just use `input()` and directly prompt the user for input. However, this time around, the arguments must be passed directly to the command line. 
 
