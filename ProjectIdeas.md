@@ -10,7 +10,7 @@ Ideas 1 - 15 from [here:](https://www.indeed.com/career-advice/career-developmen
 5. Tic-tac-toe (with GUI?)
 6. Text adventure game ("A Tale of a Warrior, Wizard, and Jedi" revisited?)
 7. Interactive Quiz (any single topic, or a wide mix?)
-8. Password generator
+8. Password generator ([DONE](./Proj2%20-%20PasswordGenerator/))
 9. Currency converter
 10. Temperature converter
 11. Music player
