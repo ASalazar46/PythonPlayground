@@ -10,9 +10,9 @@ It is one thing to be able to remember a password, but another thing to come up 
 - Experience more Python application building.
 - Write more design documents.
 ### Achieved Milestones:
--[5/24/2022] README file created, project started.
--[5/26/2022] README file filled in, up to proposed solution
--[5/27/2022] README filled in, up to current solution. Project (minimum specs) declared COMPLETE
+- [5/24/2022] README file created, project started.
+- [5/26/2022] README file filled in, up to proposed solution
+- [5/27/2022] README filled in, up to current solution. Project (minimum specs) declared COMPLETE
 ### Proposed Solution:
 Normally, in the process of making a user account, websites have their own rules that a user's password must adhere to. This application should be able to generate a password that follow these rules. Two common rules include the use of alphanumeric symbols (including punctuation marks), and password length requirements. More rules possibly exist, but these two rules are the most common, and will serve as the base of a complete application.
 
