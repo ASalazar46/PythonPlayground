@@ -5,6 +5,8 @@ import string
 # Handle the generation of the password given the arguments from
 # the command line
 def GenPass(length, setFlags):
+    if length <= 0:
+        return 'Error: Password length cannot be 0 or less. Try again.'
     symbolSet = ''
     for flag in setFlags:
         match flag:
@@ -17,8 +19,7 @@ def GenPass(length, setFlags):
             case 'n':
                 symbolSet += string.digits
             case _:
-                error_msg = 'Error: cannot parse argument `symbols`.\nTry again, or type \'py project2.py -h\' for help.'
-                return error_msg
+                return 'Error: cannot parse argument `symbols`.\nTry again, or type \'py project2.py -h\' for help.'
     return ''.join(secrets.choice(symbolSet) for char in range(length))
 
 # Process arguments from command line
