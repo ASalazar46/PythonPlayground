@@ -14,13 +14,24 @@ I would still like to implement converters of all sorts in this project.
 ### Achieved Milestones:
 - [5/28/2022] Project files created
 ### Proposed Solution:
-Similar to [project 2](../Proj2%20-%20PasswordGenerator), the script will run from the command line. It will take three arguments: a number, the unit for that number, and the unit to convert to. Running the script in the command line as `py project3.py <number> <unit> <convertUnit>` should calculate and print the value of the converted unit. 
+This application should be able to convert one unit to another unit of the same discipline (e.g: millimeters can be converted into meters because they are of the same discipline, length). The minimum spec of this project is:
+- Implement the 'mass' and 'length' discipline types
+- Implement sub-units of each discipline
+    - For metric units, from 'nano-' (10^-9) to 'giga-' (10^9)
+    - For imperial:
+        - length: inch, foot, mile
+        - weight (mass): ounce, pound
+- Calculate and display the correct conversion
 
-For this project, the appilcation should be able to convert
+Running the script from the command line should look like: `py project3.py <type> <number> <unit> <convertUnit>`. `type` specifies which discipline of measurement to focus on. `number` is the value to convert. `unit` is the unit of `number`. `convertUnit` is the unit to convert `number` to. `number` should take either an integer or a float. `type`, `unit`, and `convertUnit` should accept strings.
 
-Reading arguments from the command line will be done with the `argparse` module. Create an `ArgumentParser` object that defines arguments with `add_argument()` and parses arguments with `parse_arguments()`. The arguments are passed to a function that will calculate and return the value of the converted unit. Let's call this function `unit_convert(number, unit, convertUnit)`.
+Reading arguments from the command line will be done with the `argparse` module. Create an `ArgumentParser` object that defines arguments with `add_argument()` and parses arguments with `parse_arguments()`. The arguments are passed to a function that will calculate and return the value of the converted unit. The result should be `print()`ed out to the command line. Let's call the function that calculates the result, `unit_convert(type, number, unit, convertUnit)`.
 
-For conversions to work, the script will need the conversion ratio between the unit and the converted unit. For example, if I wanted to convert meters into millimeters then the convertion ratio would be 1000 mm / 1 m, or 1000. If the converting from millimeters to meters then the ratio would be 1 m / 1000 mm, or 1 / 1000. One possible solution is to hard-code all the required convertion ratios and store them in a dictionary for future reference. For each entry in the dictionary, the key would be a tuple containing `(unit, convUnit)`, and the value associated with that key is the convertion ratio between the two. If the tuple of the incoming arguments do not match any of the tuples within the dictionary, return an error. It should say something like, 'Error: Unable to convert value. {unit} to {convUnit} ratio undefined or incorrect spelling of {unit} or {convUnit}. Try again.'
+For example, if I wanted to convert 10 meters into millimeters, then the result would be calculated as such: 10 (m) * 1,000 (mm / m) = 10,000 (mm). In this example, the `type` is implied to be 'length', since we are working with units of length. However, we will need to specify `type` to the script so it knows which discipline to work with. `unit` and `convertUnit` are meters and millimeters, respectively. `number` is 10. The distinct pair of `unit` and `convertUnit` will have an associated conversion ratio, which will be used to calculate the result. In this case, the conversion ratio is 1000 (mm) / 1 (m), or 1000 (mm / m). The value of `number` is multiplied by the appropriate conversion ratio, 10 (m) * 1,000 (mm / m) = 10,000 (mm), and returned to the function caller to be `print()`ed.
+
+One problem is being able to calculate the correct conversion ratio based on the arguments given by `unit` and `convertUnit`. One possible solution is to not calculate it at all and reference hard-coded conversion ratios inside of dictionaries. To start, we have a dictionary containing `type`: dictionary entries. `type` is the name of the discipline and 'dictionary' is the discipline's respective dictionary of conversion ratios. In this sub-dictionary the entries are of the format, tuple: ratio. 'Tuple' contains the values received from `unit` and `convertUnit`, formatted as (`unit`, `convertUnit`). 'Ratio' is the conversion unit associated with those two units. 
+
+If `type` is not found within the first dictionary, return an error. It should say something like, 'Error: invalid discipline. Name of discipline is either undefined or spelled incorrectly.' If (`unit`, `convertUnit`) is not found within the second dictionary, return an error. It should say something like, 'Error: invalid unit conversion. Units are either undefined or spelled incorrectly.' 
 
 ### Current Progress/Solution:
 asdf
