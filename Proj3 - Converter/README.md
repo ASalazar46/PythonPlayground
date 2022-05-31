@@ -13,6 +13,7 @@ I would still like to implement converters of all sorts in this project.
 - Write more design documents.
 ### Achieved Milestones:
 - [5/28/2022] Project files created
+- [5/30/2022] Completed README, up to proposed solution
 ### Proposed Solution:
 This application should be able to convert one unit to another unit of the same discipline (e.g: millimeters can be converted into meters because they are of the same discipline, length). The minimum spec of this project is:
 - Implement the 'mass' and 'length' discipline types
