@@ -29,12 +29,13 @@ be an extension to the calculator in [project 1](../Proj1%20-%20CalculatorNoGUI/
 This application should be able to convert one unit to another unit of the same discipline (e.g: millimeters can be converted into meters because they are of the same discipline, length). The minimum spec of this project is:
 
 - Implement the 'mass' and 'length' discipline types
-- Implement sub-units of each discipline
-  - For metric units:
-    - nano, micro, milli, centi, base, kilo
-  - For imperial:
-    - length: inch, foot, yard, mile
-    - weight (mass): ounce, pound
+- Implement common sub-units of each discipline
+  - Length:
+    - Metric: nano-, micro-, milli-, centi-, base, kilo-
+    - Imperial: inch, foot, yard, mile
+  - Mass:
+    - Metric: micro-, milli-, base, kilo-
+    - Imperial: ounce, pound, stone, US ton
 - Calculate and display the correct conversion
 
 Running the script from the command line should look like: `py project3.py <type> <number> <unit> <convertUnit>`. `type` specifies which discipline of measurement to focus on. `number` is the value to convert. `unit` is the unit of `number`. `convertUnit` is the unit to convert `number` to. `number` should take either an integer or a float. `type`, `unit`, and `convertUnit` should accept strings.
