@@ -35,7 +35,7 @@ This application should be able to convert one unit to another unit of the same 
     - Imperial: inch, foot, yard, mile
   - Mass:
     - Metric: micro-, milli-, base, kilo-
-    - Imperial: ounce, pound, stone, US ton
+    - Imperial: ounce, pound, US ton
 - Calculate and display the correct conversion
 
 Running the script from the command line should look like: `py project3.py <type> <number> <unit> <convertUnit>`. `type` specifies which discipline of measurement to focus on. `number` is the value to convert. `unit` is the unit of `number`. `convertUnit` is the unit to convert `number` to. `number` should take either an integer or a float. `type`, `unit`, and `convertUnit` should accept strings.
