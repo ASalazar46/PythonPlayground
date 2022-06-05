@@ -27,6 +27,13 @@ print(contents1)
 
 readFile.close()
 
+'''
+# Use a with statement to execute file methods and ensure
+# that a file closes, regardless of result
+with open('asdfRead', encoding='utf-8') as readFile:
+    print(readFile.read())
+'''
+
 # Write contents to a file by ...
 writeFile = open('asdfWrite', 'w', encoding='utf-8')
 
