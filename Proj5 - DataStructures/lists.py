@@ -74,8 +74,8 @@ print('Largest item in the list:', max(numList))
 # and an ending point
 print('Finding the first instance of 19 in the second half of the list: index', numList.index(19, 5, 11))
 
-# Count the occurences of an item in the list
-print('Total occurences of 19:', numList.count(19))
+# Count the occurrences of an item in the list
+print('Total occurrences of 19:', numList.count(19))
 
 # ------------------------------------------------------------------
 # Lists are a mutable sequence type, meaning its contents can be 

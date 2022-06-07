@@ -25,7 +25,7 @@ Data structures are objects specialized in efficient data storage and modificati
 
 ### Current Progress/Solution
 
-List - A simple collection of data, and one of the built-in data structures in Python. It is a sequence data type, meaning items are stored in the order the user set them. It is mutable, meaning its contents can change in place after initial creation. Similar to an array in C, but has a few differences:
+List - A simple collection of data, and one of the built-in data structures in Python. It is a sequence data type, meaning items are stored in the order the user set them. Duplicate items are allowed in a list. Lists are mutable, meaning list contents can changed and modified in place after initial creation. Lists are similar to arrays in C, but has a few differences:
 
 - Lists are not restricted to one data type; it can collect data of various types. Arrays are restricted to only one data type.
 - Lists dynamically change in size. Arrays set their size upon creation, and it will not change afterwards.
