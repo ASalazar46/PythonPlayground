@@ -29,3 +29,10 @@ List - A simple collection of data, and one of the built-in data structures in P
 
 - Lists are not restricted to one data type; it can collect data of various types. Arrays are restricted to only one data type.
 - Lists dynamically change in size. Arrays set their size upon creation, and it will not change afterwards.
+
+Dictionary - A mapping of hashable objects to arbitrary objects, or key:value pairs. It is one of the built-in data structures in Python. Keys should be hashable, or immutable in nature, like strings. Keys can be numbers, much like indices in an array/list. Values can be any data type. Dictionaries are ordered, and cannot contain duplicate items.
+
+~~List is a collection which is ordered and changeable. Allows duplicate members.
+Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
+Set is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
+Dictionary is a collection which is ordered and changeable. No duplicate members.~~
