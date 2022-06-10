@@ -32,6 +32,8 @@ List - A simple collection of data, and one of the built-in data structures in P
 
 Dictionary - A mapping of hashable objects to arbitrary objects, or key:value pairs. It is one of the built-in data structures in Python. Keys should be hashable, or immutable in nature, like strings. Keys can be numbers, much like indices in an array/list. Values can be any data type. Dictionaries are ordered, and cannot contain duplicate items.
 
+Tuple - A collection of data, and one of the built-in data structures. Tuples are immutable once created; values initialized cannot be changed unless you make a new tuple with different values. Tuples can contain any data type and can have duplicate value. However, to use tuples as keys in a dictionary, values in the tuple must be immutable.  
+
 ~~List is a collection which is ordered and changeable. Allows duplicate members.
 Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
 Set is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
