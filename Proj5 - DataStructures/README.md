@@ -22,6 +22,7 @@ Data structures are objects specialized in efficient data storage and modificati
 
 - [6/5/2022] Project files created.
 - [6/7/2022] Read through Python's documentation of lists.
+- [6/11/2022] Read through Python's documentation of dictionaries, tuples, and sets.
 
 ### Current Progress/Solution
 
@@ -32,9 +33,6 @@ List - A simple collection of data, and one of the built-in data structures in P
 
 Dictionary - A mapping of hashable objects to arbitrary objects, or key:value pairs. It is one of the built-in data structures in Python. Keys should be hashable, or immutable in nature, like strings. Keys can be numbers, much like indices in an array/list. Values can be any data type. Dictionaries are ordered, and cannot contain duplicate items.
 
-Tuple - A collection of data, and one of the built-in data structures. Tuples are immutable once created; values initialized cannot be changed unless you make a new tuple with different values. Tuples can contain any data type and can have duplicate value. However, to use tuples as keys in a dictionary, values in the tuple must be immutable.  
+Tuple - A collection of data, and one of the built-in data structures. Like lists, tuples are sequence data types. Tuples are immutable once created; values initialized cannot be changed unless you make a new tuple with different values. Tuples can contain any data type and can have duplicate value. However, to use tuples as keys in a dictionary, values in the tuple must be immutable.
 
-~~List is a collection which is ordered and changeable. Allows duplicate members.
-Tuple is a collection which is ordered and unchangeable. Allows duplicate members.
-Set is a collection which is unordered, unchangeable, and unindexed. No duplicate members.
-Dictionary is a collection which is ordered and changeable. No duplicate members.~~
+Set - Sets are their own type of data structure, and a part of the built-in data structures. Sets have two variants: normal sets and frozen sets. Normal sets (referred to as just sets) are mutable, and frozen sets are immutable. Both set variants are unordered. Sets cannot have duplicate items. Only frozen sets are usable for dictionary keys.
