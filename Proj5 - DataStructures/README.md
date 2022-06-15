@@ -23,6 +23,7 @@ Data structures are objects specialized in efficient data storage and modificati
 - [6/5/2022] Project files created.
 - [6/7/2022] Read through Python's documentation of lists.
 - [6/11/2022] Read through Python's documentation of dictionaries, tuples, and sets.
+- [6/14/2022] Read about Stacks from [here.](https://realpython.com/python-data-structures/)
 
 ### Current Progress/Solution
 
@@ -36,3 +37,5 @@ Dictionary - A mapping of hashable objects to arbitrary objects, or key:value pa
 Tuple - A collection of data, and one of the built-in data structures. Like lists, tuples are sequence data types. Tuples are immutable once created; values initialized cannot be changed unless you make a new tuple with different values. Tuples can contain any data type and can have duplicate values. However, to use tuples as keys in a dictionary, values in the tuple must be immutable.
 
 Set - Sets are their own type of data structure, and a part of the built-in data structures. Sets have two variants: normal sets and frozen sets. Normal sets (referred to as just sets) are mutable, and frozen sets are immutable. Both set variants are unordered. Sets cannot have duplicate items. Only frozen sets are usable for dictionary keys.
+
+Stack - A data structure organized in a way similar to any stack of objects. In programming, this is called Last-In, First-Out semantics, where you stack data on top of each other, and have access to only the data at the top of the stack. Python does not have an official implementation of a stack, but it can be implemented with a Python list or with the `deque` class from the `collections` module.
