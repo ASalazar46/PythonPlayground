@@ -24,6 +24,7 @@ Data structures are objects specialized in efficient data storage and modificati
 - [6/7/2022] Read through Python's documentation of lists.
 - [6/11/2022] Read through Python's documentation of dictionaries, tuples, and sets.
 - [6/14/2022] Read about Stacks from [here.](https://realpython.com/python-data-structures/)
+- [6/15/2022] Read about Queues from [here.](https://realpython.com/python-data-structures/)
 
 ### Current Progress/Solution
 
@@ -38,4 +39,6 @@ Tuple - A collection of data, and one of the built-in data structures. Like list
 
 Set - Sets are their own type of data structure, and a part of the built-in data structures. Sets have two variants: normal sets and frozen sets. Normal sets (referred to as just sets) are mutable, and frozen sets are immutable. Both set variants are unordered. Sets cannot have duplicate items. Only frozen sets are usable for dictionary keys.
 
-Stack - A data structure organized in a way similar to any stack of objects. In programming, this is called Last-In, First-Out semantics, where you stack data on top of each other, and have access to only the data at the top of the stack. Python does not have an official implementation of a stack, but it can be implemented with a Python list or with the `deque` class from the `collections` module.
+Stack - A data structure organized in a way similar to any stack of objects. In programming, this is called Last-In, First-Out (LIFO) semantics, where you stack data on top of each other, and have access to only the data at the top of the stack. Python does not have an official implementation of a stack, but it can be implemented with a Python list or with the `deque` class from the `collections` module.
+
+Queue - A data structure organized in a way similar to any line (or queue, depending on geographical location) of objects. In programming, this is called First-In, First-Out (FIFO) semantics, where data objects are put in a line, and the data that got in the line first are processed first. Python does not have an official implementation of a queue, but it can be implemented using lists (albeit, not very efficiently) or with the `deque` class from the `collections` module.
