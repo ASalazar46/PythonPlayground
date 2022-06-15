@@ -24,7 +24,6 @@ except IndexError:
     print('Attempted to pop, but stack is empty.')
     print('An IndexError was thrown, as a result. (but caught, hence this message.)')
 
-
 # Stack implementation using a list and its methods
 class Stack:
     def __init__(self):
@@ -38,7 +37,7 @@ class Stack:
 
 # Checking for class functionality
 testStack = Stack()
-print('New stack:', testStack)
+print('New stack:', testStack.stack)
 
 testStack.push('a')
 print('Stack list:', testStack.stack)
