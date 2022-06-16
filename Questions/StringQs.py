@@ -1,3 +1,7 @@
+# ----------------------------
+# Questions related to strings
+# ----------------------------
+
 # Problem: Compress a string so that it displays the character count
 # next to its respective character. Example: aaaabbbcc compresses
 # to a4b3c2, or aabbccdd compresses to a2b2c2d2
