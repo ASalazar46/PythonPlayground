@@ -4,6 +4,7 @@
 # ------------------------------------
 import random
 import itertools
+import math
 
 # Remove even integers from list
 def LA_Q1():
@@ -35,37 +36,47 @@ def LA_Q3():
     print('Minimum value in list:', min(testList))
 
 # Maximum sum sublist
-# Assuming the sublist contains the largest 3 items
+# Assuming the sublist is three items long
 def LA_Q4():
     testList = [random.randrange(1, 10) for x in range(5)]
     print('Test list:', testList)
 
-    sortList = sorted(testList)
-    print(sortList)
+    start = 0
+    end = start + 3
+    sum = 0
+    maxStart = 0
+    maxEnd = 0
+    maxSum = 0
+    
+    while end <= len(testList):
+        sum = math.fsum(testList[start:end])
+        print(testList[start:end], sum)
+        if sum > maxSum:
+            maxSum = sum
+            maxStart = start
+            maxEnd = end
+        start += 1
+        end += 1
 
-    maxSubList = sortList[-3:]
-    print(maxSubList)
+    print('Largest sum sublist:')
+    print(testList[maxStart:maxEnd], maxSum)
 
 # Print products of all elements
-# Assuming only two factors to a product
+# Assuming a product is only two factors 
 def LA_Q5():
     testList = [random.randrange(1, 10) for x in range(5)]
     print('Test list:', testList)
 
     factorsList = list(itertools.product(testList, repeat=2))
-    print(factorsList)
 
-    '''prodList = [x*y for (x, y) in factorsList]
-    print(prodList)
-    '''
-    prodList = []
-    for (x,y) in factorsList:
-        prodList.append(x*y)
-        print('{0} * {1} = {2}'.format(x, y, x*y))
-    print(prodList)
+    prodList = [math.prod(x) for x in factorsList]
+    
+    for j in range(0, len(factorsList)):
+        print(factorsList[j], prodList[j])
+
 
 #LA_Q1()
 #LA_Q2()
 #LA_Q3()
 #LA_Q4()
-LA_Q5()
+#LA_Q5()
