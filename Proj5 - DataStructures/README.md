@@ -25,6 +25,8 @@ Data structures are objects specialized in efficient data storage and modificati
 - [6/11/2022] Read through Python's documentation of dictionaries, tuples, and sets.
 - [6/14/2022] Read about Stacks from [here.](https://realpython.com/python-data-structures/)
 - [6/15/2022] Read about Queues from [here.](https://realpython.com/python-data-structures/)
+- [6/17/2022] Read about Linked Lists from [here.](https://realpython.com/linked-lists-python/)
+- [6/20/2022] Read about Binary Trees from [here.](https://www.geeksforgeeks.org/python-data-structures/)
 
 ### Current Progress/Solution
 
@@ -44,3 +46,5 @@ Stack - A data structure organized in a way similar to any stack of objects. In 
 Queue - A data structure organized in a way similar to any line (or queue, depending on geographical location) of objects. In programming, this is called First-In, First-Out (FIFO) semantics, where data objects are put in a line, and the data that got in the line first are processed first. Python does not have an official implementation of a queue, but it can be implemented using lists (albeit, not very efficiently) or with the `deque` class from the `collections` module.
 
 Linked List - A data structure that collects data like a list, but the data does not have to be contiguous in memory. Items in the linked list are connected with "pointers." There are no official pointers (C language style) in Python, so the best we can do is use reference variables (will call them pointers). A linked list starts with a head pointer that denotes the start of the list and points to the first node. Linked list nodes contain data and a pointer to point towards successive linked list items. There is no official implementation of linked lists in Python, but it can be user-defined.
+
+Binary Tree - A user-defined data structure that represents a hierarchy of nodes. Each node holds data, a left child pointer, and a right child pointer. The top-most node is called the root, and is the starting place when traversing the binary tree. The bottom-most nodes (i.e: nodes with no children) are called leaves. 
