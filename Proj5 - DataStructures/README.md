@@ -27,6 +27,7 @@ Data structures are objects specialized in efficient data storage and modificati
 - [6/15/2022] Read about Queues from [here.](https://realpython.com/python-data-structures/)
 - [6/17/2022] Read about Linked Lists from [here.](https://realpython.com/linked-lists-python/)
 - [6/20/2022] Read about Binary Trees from [here.](https://www.geeksforgeeks.org/python-data-structures/)
+- [6/21/2022] Read about Binary Search Trees from [here](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/) and [here.](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
 
 ### Current Progress/Solution
 
@@ -48,3 +49,11 @@ Queue - A data structure organized in a way similar to any line (or queue, depen
 Linked List - A data structure that collects data like a list, but the data does not have to be contiguous in memory. Items in the linked list are connected with "pointers." There are no official pointers (C language style) in Python, so the best we can do is use reference variables (will call them pointers). A linked list starts with a head pointer that denotes the start of the list and points to the first node. Linked list nodes contain data and a pointer to point towards successive linked list items. There is no official implementation of linked lists in Python, but it can be user-defined.
 
 Binary Tree - A user-defined data structure that represents a hierarchy of nodes. Each node holds data, a left child pointer, and a right child pointer. The top-most node is called the root, and is the starting place when traversing the binary tree. The bottom-most nodes (i.e: nodes with no children) are called leaves.
+
+Binary Search Tree - A variant of the binary tree. In addition to having up to two children per node, there are three more definitions that make a binary tree a binary search tree:
+
+- The left subtree of the root node contains data smaller than the root node's data.
+- The right subtree of the root node contains data bigger than the root node's data.
+- Both left and right subtrees are also BSTs.
+
+For example: if I had a BST with a root of 100 and I wanted to insert 50 and 150 into the BST, then `BSTNode(50)` would be set as the root - `BSTNode(100)` - node's left subtree, and `BSTNode(150)` would be the root node's right subtree.

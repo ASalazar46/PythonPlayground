@@ -1,8 +1,6 @@
 # ------------
 # ------------
 # Binary Search Tree
-#https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/
-#https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/
 # ------------
 # ------------
 
@@ -38,18 +36,17 @@ def delete(root, data):
     else:
         if root._left == None and root._right == None:
             return None
-        elif root._left == None:
+        if root._left == None:
             copyNode = root._right
-            root = None
+            root= None
             return copyNode
         elif root._right == None:
             copyNode = root._left
             root = None
             return copyNode
-        else:
-            copyNode = minimum(root._right)
-            root._data = copyNode._data
-            root._right = delete(root._right, copyNode._data)
+        copyNode = minimum(root._right)
+        root._data = copyNode._data
+        root._right = delete(root._right, copyNode._data)
     return root
 
 def search(root, data):
@@ -84,42 +81,69 @@ def maximum(root):
 print('Initialize BST...')
 root = BSTNode(50)
 printTree(root)
+print('\n')
 
 print('-'*60)
 print('Testing insert()...')
 print('-'*60)
 
 print('insert(root, 25)')
-printTree(insert(root, 25))
-print('insert(root, 75)')
-printTree(insert(root, 75))
-print('insert(root, 10)')
-printTree(insert(root, 10))
-print('insert(root, 40)')
-printTree(insert(root, 40))
-print('insert(root, 60)')
-printTree(insert(root, 60))
-print('insert(root, 90)')
-printTree(insert(root, 90))
+root = insert(root, 25)
+printTree(root)
+print('\n')
 
+print('insert(root, 75)')
+root = insert(root, 75)
+printTree(root)
+print('\n')
+
+print('insert(root, 10)')
+root = insert(root, 10)
+printTree(root)
+print('\n')
+
+print('insert(root, 40)')
+root = insert(root, 40)
+printTree(root)
+print('\n')
+
+print('insert(root, 60)')
+root = insert(root, 60)
+printTree(root)
+print('\n')
+
+print('insert(root, 90)')
+root = insert(root, 90)
+printTree(root)
+print('\n')
 
 print('-'*60)
 print('Testing search()...')
 print('-'*60)
 
 print('search(root, 25)')
-printTree(search(root, 25))
+search1 = search(root, 25)
+printTree(search1)
+print('\n')
+
 print('search(root, 80)')
-printTree(search(root, 80))
+search2 = search(root, 80)
+printTree(search2)
+print('\n')
 
 print('-'*60)
 print('Testing minimum() and maximum()...')
 print('-'*60)
 
 print('minimum(root)')
-printTree(minimum(root))
+rootMin = minimum(root)
+printTree(rootMin)
+print('\n')
+
 print('maximum(root')
-printTree(maximum(root))
+rootMax = maximum(root)
+printTree(rootMax)
+print('\n')
 
 print('-'*60)
 print('Testing delete()...')
@@ -127,18 +151,39 @@ print('-'*60)
 
 print('Pre deletions')
 printTree(root)
+print('\n')
 
 print('delete(root, 60)')
-printTree(delete(root, 60))
+root = delete(root, 60)
+printTree(root)
+print('\n')
+
 print('delete(root, 75)')
-printTree(delete(root, 75))
+root = delete(root, 75)
+printTree(root)
+print('\n')
+
 print('delete(root, 25)')
-printTree(delete(root, 25))
+root = delete(root, 25)
+printTree(root)
+print('\n')
+
 print('delete(root, 90)')
-printTree(delete(root, 90))
+root = delete(root, 90)
+printTree(root)
+print('\n')
+
 print('delete(root, 50)')
-printTree(delete(root, 10))
+root = delete(root, 50)
+printTree(root)
+print('\n')
+
 print('delete(root, 40)')
-printTree(delete(root, 40))
+root = delete(root, 40)
+printTree(root)
+print('\n')
+
 print('delete(root, 10)')
-printTree(delete(root, 60))
+root = delete(root, 10)
+printTree(root)
+print('\n')
