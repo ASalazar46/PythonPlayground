@@ -27,7 +27,25 @@ A rough remake of the project I worked on for my engineering capstone projects (
 
 #### Front-end things
 
-There are many web development frameworks available. Still choosing...
+~~There are many web development frameworks available. Still choosing...~~ I have chosen to learn Django and use it for this project redux. The main reason is because this framework, along with Python, was a suggestion for the choice of software to overhaul the HTML/CSS version of the dashboard. The reason why we went with Javascript and Javascript frameworks instead was because we were learning those softwares in class at the time. It make sense to use Django and Python for this project redux because I am learning Python. However, I will need some time to go through the Django tutorial and get familiar with the basics of it. However, again, I do have a general idea on what this project may have for content.
+
+A lot of websites have a landing page. We did not make one in the original project, but I may as well make one in this redux. There will be a landing page that contains links to the following pages:
+
+- An 'About Us' section, where it briefly talks about the project's purposes and the people behind the scenes.
+- Four buttons (boxes?) that direct users to the data. I say four boxes because there were four teams collecting data, and they were stored in four different databases. In this redux, there can be as much as I want, but I choose four.
+- Images, color scheme, and other general design patterns to make the page look pretty and professional (as possible).
+
+In the pages that will display the data, they should contain:
+
+- asdf
+- fdsa
+- fdas
+- afds
+
+At the top of each page should be a navigation bar. It should contain:
+
+- A clickable logo that direct the user to the landing page when clicked.
+- Four dropdown menus that direct the user to specific parts of a data page.
 
 #### Back-end things
 
