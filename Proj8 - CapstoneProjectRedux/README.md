@@ -35,21 +35,21 @@ A lot of websites have a landing page. We did not make one in the original proje
 - Four buttons (boxes?) that direct users to the data. I say four boxes because there were four teams collecting data, and they were stored in four different databases. In this redux, there can be as much as I want, but I choose four.
 - Images, color scheme, and other general design patterns to make the page look pretty and professional (as possible).
 
-In the pages that will display the data, they should contain:
+In the pages that will display the data, they should have:
 
-- asdf
-- fdsa
-- fdas
-- afds
+- Boxes containing the most recent data points
+- Boxes containing an average of the data points
+  - Starting with overall, then weekly, monthly, and yearly later on
+- A graph plotting the data points
 
 At the top of each page should be a navigation bar. It should contain:
 
 - A clickable logo that direct the user to the landing page when clicked.
-- Four dropdown menus that direct the user to specific parts of a data page.
+- Four buttons that direct the user to the data pages.
 
 #### Back-end things
 
-asdf
+I am unsure of how the back-end will work with Django, but Im sure the tutorial will give an overview of how the back-end works. If not, then Django's official documentation may do that. However, the back-end should be able to communicate with the database, and call the necessary database query to retrieve data.
 
 #### Database and data management
 
