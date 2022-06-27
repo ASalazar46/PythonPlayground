@@ -27,7 +27,7 @@ A rough remake of the project I worked on for my engineering capstone projects (
 
 #### Front-end things
 
-~~There are many web development frameworks available. Still choosing...~~ I have chosen to learn Django and use it for this project redux. The main reason is because this framework, along with Python, was a suggestion for the choice of software to overhaul the HTML/CSS version of the dashboard. The reason why we went with Javascript and Javascript frameworks instead was because we were learning those softwares in class at the time. It make sense to use Django and Python for this project redux because I am learning Python. However, I will need some time to go through the Django tutorial and get familiar with the basics of it. However, again, I do have a general idea on what this project may have for content.
+~~There are many web development frameworks available. Still choosing...~~ I have chosen to learn Django and use it for this project redux. The main reason is because this framework, along with Python, was a suggestion for the choice of software to overhaul the HTML/CSS version of the dashboard. The reason why we went with Javascript and Javascript frameworks instead was because we were learning those softwares in class at the time. It makes sense to use Django and Python for this project redux because I am learning Python. However, I will need some time to go through the Django tutorial and get familiar with the basics of it. However, again, I do have a general idea on what this project may have for content.
 
 A lot of websites have a landing page. We did not make one in the original project, but I may as well make one in this redux. There will be a landing page that contains links to the following pages:
 
@@ -44,12 +44,12 @@ In the pages that will display the data, they should have:
 
 At the top of each page should be a navigation bar. It should contain:
 
-- A clickable logo that direct the user to the landing page when clicked.
+- A clickable logo that directs the user to the landing page when clicked.
 - Four buttons that direct the user to the data pages.
 
 #### Back-end things
 
-I am unsure of how the back-end will work with Django, but Im sure the tutorial will give an overview of how the back-end works. If not, then Django's official documentation may do that. However, the back-end should be able to communicate with the database, and call the necessary database query to retrieve data.
+I am unsure of how the back-end will work with Django, but I'm sure the tutorial will give an overview of how the back-end works. If not, then Django's official documentation may do that. However, the back-end should be able to communicate with the database, and call the necessary database query to retrieve data.
 
 #### Database and data management
 
