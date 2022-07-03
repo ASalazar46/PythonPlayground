@@ -60,6 +60,26 @@ class Graph2:
                     edgeList.append((vertexKey, vertexValue))
         print(edgeList)
 
+# Undirected, weighted graph represented with a 2d list / adjacency matrix
+class Graph3:
+    def __init__(self, vrtCnt):
+        self.adjMat = [[0]*vrtCnt for x in range(vrtCnt)]
+        self.vertices = {x for x in range(vrtCnt)}
+        self.edges = set()
+        self.vrtCount = vrtCnt
+    
+    def add_vertex(self):
+        pass
+
+    def add_edge(self):
+        pass
+
+    def print_vertices(self):
+        print(self.vertices)
+
+    def print_edges(self):
+        pass
+
 testGraph = { 
    "a" : ["b","c"],
    "b" : ["a", "d"],
@@ -79,6 +99,8 @@ graph.add_edge('f', 'b')
 graph.print_vertices()
 graph.print_edges()
 '''
+
+'''
 graph2 = Graph2(testGraph)
 graph2.print_vertices()
 graph2.print_edges()
@@ -89,3 +111,4 @@ graph2.add_edge('f', 'b')
 
 graph2.print_vertices()
 graph2.print_edges()
+'''
