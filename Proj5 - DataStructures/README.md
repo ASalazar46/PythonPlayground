@@ -28,6 +28,7 @@ Data structures are objects specialized in efficient data storage and modificati
 - [6/17/2022] Read about Linked Lists from [here.](https://realpython.com/linked-lists-python/)
 - [6/20/2022] Read about Binary Trees from [here.](https://www.geeksforgeeks.org/python-data-structures/)
 - [6/21/2022] Read about Binary Search Trees from [here](https://www.geeksforgeeks.org/binary-search-tree-set-1-search-and-insertion/) and [here.](https://www.geeksforgeeks.org/binary-search-tree-set-2-delete/)
+- [7/8/2022] Read about Graphs from [here](https://www.tutorialspoint.com/python_data_structure/python_graphs.htm) and [here.](https://www.geeksforgeeks.org/python-data-structures/)
 
 ### Current Progress/Solution
 
@@ -57,3 +58,5 @@ Binary Search Tree - A variant of the binary tree. In addition to having up to t
 - Both left and right subtrees are also BSTs.
 
 For example: if I had a BST with a root of 100 and I wanted to insert 50 and 150 into the BST, then `BSTNode(50)` would be set as the root - `BSTNode(100)` - node's left subtree, and `BSTNode(150)` would be the root node's right subtree.
+
+Graphs - A data structure containing a set of nodes and a set of links between different nodes. Nodes are also called vertices and links between nodes are also called edges or arcs. While Python does not have official support for a graph, it is easily implemented with existing Python data structures. One common way of representation is to track each node's adjacency to other nodes. Two nodes are adjacent when connected with an edge. Tracking node adjacency can be done with a 2D list or with a dictionary, but there are more ways to accomplish this task. Graphs can be directed, which means that edges are directed from one node to another, and not in the reverse direction. Graphs can be undirected, which means that edges are pointing in both directions between nodes. Edges may also have weight attached to them, which may represent different things based on the context of the graph.
