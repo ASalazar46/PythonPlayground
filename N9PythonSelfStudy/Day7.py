@@ -26,6 +26,44 @@ print('aaaaaaaaaa\nbbbbbbbbbb')
 # \t tab
 # \b backspace
 # \s space
-# so on and so forth, see python docs
+# so on and so forth, see python docs for others
 
-# Strings can be formatted
+# Strings can be formatted with variables
+# %s expects a string, %d expects an integer
+name = 'John String'
+age = 9999
+print('My name is %s, and I am %d years old.' % (name, age))
+
+# or
+
+print('My name is {}, and I am {} years old.'.format(name, age))
+
+# String Functions
+# For a complete list of functions, see the python docs
+
+# Convert a string into all upper case letters
+allUpperCaseStr = someStr.upper()
+print(allUpperCaseStr)
+
+# Convert a string into all lower case letters
+allLowerCaseStr = someStr.lower()
+print(allLowerCaseStr)
+
+# Capitalize the first letter of every word (title)
+titleStr = someStr.title()
+print(titleStr)
+
+# Swap the cases of a string
+swappedStr = someStr.swapcase()
+print(swappedStr)
+
+# Count the number of times a substring appears in a string.
+# Can be used to find number of times a word appears in a string.
+repeatedStr = someStr * 4
+print(repeatedStr.count('string'))
+print(repeatedStr.count(''))
+
+# Find the position of a given substring in a string
+# If multiple instances of the substring exist, it
+# gives the position of the first instance
+print(someStr.find('string'))
