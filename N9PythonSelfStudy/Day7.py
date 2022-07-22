@@ -67,3 +67,15 @@ print(repeatedStr.count(''))
 # If multiple instances of the substring exist, it
 # gives the position of the first instance
 print(someStr.find('string'))
+
+# Join elements of a list, separated by a given character
+delimiter = '-'
+joinList = ['111', '222', '3456']
+print(delimiter.join(joinList))
+
+# Split a string into a list by a given character
+print(someStr.split(' '))
+
+# Replace all instances of a substring with a
+# different substring
+print(someStr.replace('string', 'STRINGSTRINGSTRING'))
