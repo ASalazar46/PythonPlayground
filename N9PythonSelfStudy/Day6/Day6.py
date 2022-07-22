@@ -13,12 +13,12 @@
 # upon its code block's completion
 
 # Read from a file
-with open('./readfile.txt', 'r') as F:
-    text = F.read()
-
-print(text)
+with open('readThisFile', 'r') as F:
+    print(F.read())
 
 # Write to a file
-with open('writefile.txt', 'w') as F:
-    F.write("I wrote this sentence with code into this file.")
-
+with open('writeThisFile', 'w') as F:
+    F.write('This sentence was written into the file with code.')
+    print('Write complete.')
+with open('writeThisFile', 'r') as F:
+    print(F.read())
